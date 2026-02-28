@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Productivas - PAPIIT IN300825</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="icon" href="data:,">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="title-bar">
+        <div class="logo-container">
+            <a href="https://www.unam.mx/" target="_blank">
+                <img src="logo_unam.png" alt="UNAM Logo" class="logo">
+            </a>
+            <a href="https://economicas.unam.mx/" target="_blank">
+                <img src="logo_iiec.png" alt="IIEc Logo" class="logo">
+            </a>
+        </div>
+        <div class="title-text">
+            Redes productivas y núcleos industriales dinámicos a escala global y nacional como marco de una política industrial en México
+        </div>
+        <div class="logo-spacer"></div>
+    </div>
+
+    <div id="nav-bar">
+        <div class="nav-buttons-container">
+            <button class="nav-button active" onclick="showSection('inicio')">INICIO</button>
+            <button class="nav-button" onclick="showSection('marco')">Marco Teórico</button>
+            <button class="nav-button" onclick="showSection('metodologia')">Metodología</button>
+            <button class="nav-button" onclick="showSection('contacto')">Contacto</button>
+        </div>
+    </div>
+
+    <div id="main-container">
+
+        <div id="inicio" class="main-content-panel active-panel">
+            <div id="map"></div>
+        </div>
+        
+        <div id="marco" class="main-content-panel">
+            <div class="panel-inner-content">
+                <h2>Marco Teórico</h2>
+
+                <p>La comprensión de la dinámica industrial en México exige integrar las dimensiones política y espacial, superando el análisis puramente económico. El Estado se debe reconfigurar mediante procesos de re-escalamiento para adaptar el territorio a los flujos del capital global, transitando de la homogeneidad nacional a la competitividad de regiones urbanas específicas.</p>
+                
+                <p>Esta metamorfosis debe responder a la transición tecnológica automotriz y al ascenso del paradigma electrónico-informático, evitando que los clústeres funcionen como simples enclaves de ensamblaje desconectados del entorno.</p>
+
+                <p>La clave reside en sustituir la inserción pasiva en las RPG por un acoplamiento estratégico activo. Esto requiere que el Estado actúe como arquitecto del mercado, implementando instituciones inclusivas que condicionen la inversión extranjera y fuercen la transferencia tecnológica hacia proveedores locales, especializando el capital humano y la infraestructura local. Así, la política industrial puede convertirse en una herramienta de ordenamiento territorial que sincroniza las escalas globales con las capacidades locales.</p>
+                
+                <p>En definitiva, el desarrollo endógeno solo será viable si se articulan los Sistemas Regionales de Innovación con una construcción social del espacio urbano que mitigue la segregación. La soberanía industrial depende de armonizar la eficiencia de las cadenas de valor con la cohesión territorial, transformando los nodos logísticos en verdaderos motores de bienestar social y capacidad productiva nacional.</p>
+            </div>
+        </div>
+        
+        <div id="metodologia" class="main-content-panel">
+            <div class="panel-inner-content">
+                <h2>Metodología</h2>
+                
+                <p>El proyecto se desarrolló bajo una metodología de carácter documental y empírico. En la primera etapa, se efectuó una revisión exhaustiva de literatura bibliográfica y hemerográfica especializada en economía del conocimiento.</p>
+                
+                <p>En la segunda etapa, se llevó a cabo el procesamiento empírico utilizando bases de datos internacionales como <b>ICIOT</b> y <b>WIOT</b>. El tratamiento de estas fuentes se apoyó en herramientas estadísticas y sistemas de información geográfica (SIG).</p>
+                
+                <p>Nuestra participación específica consistió en el manejo de una base mediante un script en <b>Python</b>, que permitió filtrar y organizar registros, generando archivos para su integración cartográfica.</p>
+
+                <h3>Metodología del Visualizador Web</h3>
+                <p>Este mapa interactivo utiliza <b>HTML, CSS y Leaflet.js</b>. Los datos fueron procesados desde fuentes originales a formato GeoJSON para permitir su visualización dinámica en escalas: Mundial, Nacional, Estatal y Municipal.</p>
+            </div>
+        </div>
+
+        <div id="contacto" class="main-content-panel">
+            <div class="panel-inner-content">
+                <h2>Contacto</h2>
+                <div class="credits-content">
+                    <h3>Universidad Nacional Autónoma de México (UNAM)</h3>
+                    <h3>Instituto de Investigaciones Económicas (IIEc)</h3>
+                    <h3>Licenciatura en Urbanismo</h3>
+                    <br>
+                    <p><strong>Dr. Ordóñez Gutiérrez Sergio Adrián</strong></p>
+                    <p><strong>Dr. Bouchain Galicia Rafael César</strong></p>
+                    <br>
+                    <p><strong>Elaborado por:</strong></p>
+                    <p>
+                        <strong>Manuel Emiliano Moreno Pérez</strong><br>
+                        emisliano974@gmail.com<br>
+                    </p>
+                    <p>
+                        <strong>Ismael Kaleet Luna Aguilar</strong><br>
+                        ia309745@gmail.com<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div> 
+    
+    <script src="script.js"></script>
+</body>
+</html>
